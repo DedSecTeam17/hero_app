@@ -28,11 +28,4 @@ jobs:
           flutter build apk
           ls -l build/app/outputs/flutter-apk
 
-      - name: Build app (iOS)
-        if: always()
-        run: |
-          cd ios
-          pod install
-          cd ..
-          flutter build ios --no-codesign
-          ls -l build/ios/iphoneos
+
